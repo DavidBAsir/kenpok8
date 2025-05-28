@@ -1,0 +1,377 @@
+/* Fuentes base */
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  background-color: #111;
+  color: #fff;
+}
+
+h1, h2 {
+  font-size:xx-large;
+  font-family: 'Bebas Neue', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #F2B910;
+  text-shadow: 2px 2px 4px #000;
+}
+
+/* NAV */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-img {
+  height: 40px;
+  width: auto;
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #F2B910;
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  color: white;
+  text-align: center;
+  padding: 100px 20px;
+  overflow: hidden;
+}
+
+.hero-bg {
+  background-image: url('../img/kenpok8-hd.jpg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(8px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Botones generales */
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 30px;
+  background-color: #F2B910;
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #d1a000;
+  color: white;
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 10px;
+}
+
+.social-link {
+  color: #F2B910;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.social-link:hover {
+  color: white;
+}
+
+/* SECTION */
+.section {
+  padding: 4rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.section.dark {
+  background-color: #222;
+}
+
+/* GALERÍA */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 10px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: filter 0.3s ease, transform 0.3s ease;
+  display: block;
+}
+
+.gallery-item:hover img {
+  filter: grayscale(100%) blur(3px);
+  transform: scale(1.05);
+}
+
+.gallery-item .overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 10px;
+  font-weight: bold;
+  pointer-events: none;
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+.gallery-item:hover .overlay {
+  opacity: 1;
+}
+
+/* CLASES - TABLE FORMAT */
+.classes-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 2rem;
+}
+
+.classes-table th,
+.classes-table td {
+  padding: 1rem;
+  border: 1px solid #444;
+  text-align: left;
+}
+
+.classes-table th {
+  background-color: #333;
+  color: #F2B910;
+}
+
+/* CONTACTO */
+#contact p a {
+  color: #e0e0e0;
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+#contact .btn {
+  display: block;
+  margin: 2rem auto 0;
+}
+
+/* FOOTER */
+footer {
+  background-color: #000;
+  color: #999;
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.9rem;
+}
+
+footer .socials a {
+  color: #F2B910;
+  margin: 0 0.5rem;
+  text-decoration: none;
+}
+
+footer .socials a:hover {
+  text-decoration: underline;
+}
+
+/* INSTRUCTOR SECTION */
+.instructor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.instructor img {
+  max-width: 200px;
+  border-radius: 100px;
+  border: 3px solid #F2B910;
+}
+
+.instructor h3 {
+  font-size: 2rem;
+  margin: 0.5rem 0;
+  color: #F2B910;
+}
+
+.instructor p {
+  max-width: 700px;
+}
+
+/* MARCAS ASOCIADAS */
+.marcas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.marcas img {
+  max-height: 80px;
+  max-width: 150px;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.marcas img:hover {
+  filter: none;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .instructor {
+    padding: 0 1rem;
+  }
+}
+
+.patrocinios {
+  list-style: none;
+  padding-left: 0;
+  max-width: 700px;
+  margin: 2rem auto 0;
+  line-height: 1.8;
+}
+
+.patrocinios li {
+  background-color: #111;
+  border-left: 4px solid #F2B910;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
+}
+
+.class-table {
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+.class-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #111;
+  border: 1px solid #444;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.class-table th, .class-table td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid #333;
+}
+
+.class-table th {
+  background-color: #F2B910;
+  color: #000;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.class-table td {
+  color: #eee;
+}
+
+.class-table tr:hover {
+  background-color: #222;
+}
+
+.class-footer {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Galería del instructor (opcional si quieres más control visual) */
+.instructor-gallery {
+  margin-top: 2rem;
+}
